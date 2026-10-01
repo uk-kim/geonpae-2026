@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 건패 정기모임 안내</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:18px 10px;background:#eeeae0;color:#252525;font-family:"Apple SD Gothic Neo","Malgun Gothic",sans-serif}
+.paper{max-width:760px;margin:auto;background:#fffdf6;border:2px solid #777;padding:24px 24px 28px;box-shadow:0 5px 18px rgba(0,0,0,.10)}
+.header{border-bottom:2px solid #777;padding-bottom:14px;text-align:center;position:relative}
+.header h1{margin:0;font-family:"Batang","AppleMyungjo",serif;font-size:38px;letter-spacing:7px}
+.header .sub{margin-top:8px;color:#38567c;font-size:14px;letter-spacing:2px}
+.header:before,.header:after{content:"🌿";position:absolute;top:6px;font-size:28px}
+.header:before{left:9%}.header:after{right:9%;transform:scaleX(-1)}
+.title{text-align:center;margin:25px 0 18px;font-size:29px;font-weight:900;line-height:1.25}
+.title span{color:#1685d1}
+.yellow{background:linear-gradient(transparent 57%,#ffe88a 57%,#ffe88a 91%,transparent 91%);padding:0 6px}
+.intro{font-family:"Batang","AppleMyungjo",serif;font-size:15px;line-height:1.9;margin:0 4px 20px}
+.info{display:grid;grid-template-columns:105px 1fr;gap:9px 14px;align-items:center;margin:15px 4px 25px}
+.label{text-align:center;padding:9px 6px;border-radius:8px;font-weight:800;font-size:16px}
+.blue{background:#d9efff}.green{background:#dff3d6}.pink{background:#f7d9e7}
+.value{font-size:16px;line-height:1.5}
+.section-title{font-size:22px;font-weight:900;margin:20px 0 10px;display:flex;align-items:center;gap:8px}
+.section-title .marker{background:linear-gradient(transparent 55%,#ffe78c 55%);padding:0 4px}
+.schedule{width:100%;border-collapse:collapse;font-size:14px;background:#fff}
+.schedule th,.schedule td{border:1.5px solid #777;padding:10px 8px;text-align:center}
+.schedule th{background:#e8f3fb;font-weight:800}
+.schedule .day1{background:#e4f2ff;font-weight:800;width:65px}
+.schedule .day2{background:#fde4ec;font-weight:800}
+.schedule td:last-child{text-align:left}
+.map-wrap{margin-top:24px}
+.map{display:block;text-decoration:none;color:#222;border:4px solid #78ad63;border-radius:10px;padding:13px;background:#fffef4}
+.map-title{text-align:center;font-size:22px;font-weight:900;margin:0 0 10px}
+.crayon-map{height:285px;position:relative;overflow:hidden;background:#fffdf1;border:2px dashed #9dbb86}
+.sea{position:absolute;left:0;top:0;width:36%;height:100%;background:#d7efff;border-right:5px wavy #5aa6d6}
+.sea-text{position:absolute;left:7%;top:40%;font-weight:900;color:#2574a9;text-align:center;line-height:1.5}
+.road{position:absolute;left:47%;top:-15px;width:90px;height:330px;background:#ddd8cd;transform:rotate(-7deg);border-left:4px dashed #777;border-right:4px dashed #777}
+.tree{position:absolute;font-size:34px}
+.t1{left:40%;top:42px}.t2{left:62%;top:72px}.t3{left:42%;top:170px}
+.house{position:absolute;right:8%;top:105px;font-size:57px}
+.pension{position:absolute;right:3%;top:176px;font-size:20px;font-weight:900;background:#ffe779;padding:4px 8px;transform:rotate(-2deg)}
+.port{position:absolute;right:5%;top:20px;font-weight:800}
+.beach{position:absolute;left:4%;bottom:18px;background:#d7b179;padding:5px 7px;font-weight:700;transform:rotate(-3deg)}
+.arrow{position:absolute;right:30%;top:145px;font-size:36px;color:#e6533f;transform:rotate(25deg)}
+.map-button{margin-top:12px;background:#e5f5dc;border:2px solid #3d963f;border-radius:9px;text-align:center;padding:12px;font-size:17px;font-weight:900;color:#175f26}
+.notice{margin-top:23px}
+.notice ul{padding-left:22px;margin:8px 0;line-height:1.85;font-size:14px}
+.highlight{background:#ffdbe5;padding:0 3px}
+.footer{text-align:center;margin-top:31px}
+.footer .date{font-family:"Batang",serif;font-size:16px;margin-bottom:12px}
+.footer .chair{font-family:"Batang","AppleMyungjo",serif;font-size:25px;font-weight:900;letter-spacing:3px}
+.stamp{display:inline-block;margin-left:8px;border:3px double #c83e36;color:#c83e36;padding:5px 4px;font-size:13px;letter-spacing:0;transform:rotate(-5deg)}
+.doodle{text-align:center;margin-top:12px;color:#555;font-family:"AppleMyungjo",serif;font-size:13px}
+@media(max-width:520px){
+ .paper{padding:20px 15px}.header h1{font-size:30px;letter-spacing:4px}.header:before{left:1%}.header:after{right:1%}
+ .title{font-size:24px}.intro{font-size:14px}.info{grid-template-columns:86px 1fr;gap:8px}.value{font-size:14px}
+ .schedule{font-size:12.5px}.schedule th,.schedule td{padding:8px 5px}.crayon-map{height:245px}
+ .house{font-size:47px}.pension{font-size:16px}.footer .chair{font-size:22px}
+}
+</style>
+</head>
+<body>
+<div class="paper">
+  <div class="header">
+    <h1>가 정 통 신 문</h1>
+    <div class="sub">- 함께여서 더 좋은 시간 -</div>
+  </div>
+
+  <div class="title"><span class="yellow">2026 <span>건패</span> 정기모임 안내</span></div>
+
+  <div class="intro">
+    회원 및 가족 여러분, 안녕하십니까?<br>
+    2026년 건패 정기모임을 아래와 같이 진행하고자 하오니,
+    회원 및 가족 여러분께서는 바쁘시더라도 많은 참석 부탁드립니다.<br>
+    모처럼 회원과 가족들이 한자리에 모여 즐겁고 뜻깊은 시간을 보내고자 합니다.
+    많은 관심과 협조 부탁드립니다.
+  </div>
+
+  <div class="info">
+    <div class="label blue">일 시</div>
+    <div class="value"><strong>2026년 10월 4일(일) 16:00<br>~ 10월 5일(월) 13:00</strong></div>
+    <div class="label green">장 소</div>
+    <div class="value"><strong>해가온펜션</strong><br>(충남 태안군 남면 마검포길 185-6)</div>
+    <div class="label pink">참석대상</div>
+    <div class="value"><strong>건패 회원 및 가족 일동</strong></div>
+  </div>
+
+  <div class="section-title">⏰ <span class="marker">행사 일정표</span></div>
+  <table class="schedule">
+    <tr><th>일정</th><th>시간</th><th>주요 내용</th></tr>
+    <tr><td class="day1" rowspan="4">10/4<br>(일)</td><td>16:00 ~ 16:30</td><td>펜션 도착 및 입실<br>(자유시간)</td></tr>
+    <tr><td><strong>16:30 ~ 18:30</strong></td><td><strong>화합의 장</strong><br>(건패 단합 프로그램)</td></tr>
+    <tr><td><strong>18:30 ~ 21:00</strong></td><td><strong>바비큐 파티</strong><br>(저녁식사 및 친목 시간)</td></tr>
+    <tr><td>21:00 ~</td><td>자유시간<br>(음주가무 &amp; 힐링 타임)</td></tr>
+    <tr><td class="day2" rowspan="3">10/5<br>(월)</td><td>~ 11:00</td><td>기상 및 자유시간 / 퇴실 준비</td></tr>
+    <tr><td><strong>11:00</strong></td><td><strong>펜션 퇴실</strong></td></tr>
+    <tr><td><strong>11:00 ~ 13:00</strong></td><td><strong>점심식사 후 해산</strong></td></tr>
+  </table>
+
+  <div class="map-wrap">
+    <div class="section-title">🚙 <span class="marker" style="background:linear-gradient(transparent 55%,#d9f0c9 55%)">오시는 길 (약도)</span></div>
+    <a class="map" href="https://naver.me/Ix0eFfwe" target="_blank" rel="noopener noreferrer">
+      <div class="crayon-map">
+        <div class="sea"></div>
+        <div class="sea-text">〰 〰 〰<br>바 다<br><small>(마검포해수욕장)</small><br>〰 〰 〰</div>
+        <div class="road"></div>
+        <div class="tree t1">🌳</div><div class="tree t2">🌲</div><div class="tree t3">🌳</div>
+        <div class="port">🔴 마검포항</div>
+        <div class="house">🏠</div>
+        <div class="arrow">➜</div>
+        <div class="pension">해가온펜션</div>
+        <div class="beach">마검포 해수욕장</div>
+      </div>
+      <div class="map-button">📍 네이버 지도에서 자세히 보기 ›</div>
+    </a>
+  </div>
+
+  <div class="notice">
+    <div class="section-title">📣 <span class="marker">안내사항</span></div>
+    <ul>
+      <li><span class="highlight">배우자 및 자녀 동반을 적극 권장</span>합니다.</li>
+      <li>원활한 행사 진행을 위하여 가급적 <span class="highlight"><strong>16시까지 입실</strong></span> 부탁드립니다.</li>
+      <li>회원 간 친목과 화합을 위한 소정의 게임 프로그램이 예정되어 있습니다.</li>
+      <li>개인 세면도구 및 필요한 물품은 개별 준비 부탁드립니다.</li>
+      <li>안전하고 즐거운 모임이 될 수 있도록 적극적인 협조 부탁드립니다.</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <div class="date">2026년 9월</div>
+    <div class="chair">건패 회장 김성욱 <span class="stamp">건패</span></div>
+    <div class="doodle">좋은 사람들이 만드는 특별한 날 · 2026 건패 정기모임</div>
+  </div>
+</div>
+</body>
+</html>
