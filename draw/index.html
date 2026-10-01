@@ -1,0 +1,159 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>2026 건패 조 추첨식</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:#17120e;color:#241c15}button,input{font:inherit}.page{display:none;min-height:100vh}.page.active{display:block}
+#setupPage{background:#f2ead9;padding:16px}.paper{max-width:760px;margin:auto;background:#fffaf0;border:2px solid #69594a;padding:20px}h1{text-align:center;font-family:serif;letter-spacing:4px}.sub{text-align:center;color:#75695e}.groupHead{display:flex;justify-content:space-between;align-items:center;margin:22px 0 8px;font-size:19px;font-weight:800}.addBtn{padding:9px 12px;border:1px solid #888;background:#fff;border-radius:8px}.rows{display:grid;gap:7px}.row{display:grid;grid-template-columns:1fr 90px 42px;gap:7px}.row input{min-width:0;padding:11px;border:1px solid #aaa;border-radius:7px;background:white}.remove{border:0;border-radius:7px;background:#eee}.note{font-size:12px;color:#776b5e;line-height:1.7;margin-top:12px}.next{width:100%;margin-top:24px;padding:15px;border:0;border-radius:9px;background:#251e18;color:#fff;font-size:18px;font-weight:900}
+#drawPage{background:radial-gradient(circle at 50% 24%,#4a392b,#17120e 60%,#090706);color:white;text-align:center;padding:18px 12px 36px}.title{font-family:serif;font-size:40px;letter-spacing:5px;font-weight:900}.caption{color:#cbb9a0;margin:5px}.progress{color:#ead6b3;font-size:19px;font-weight:800}.stage{height:500px;position:relative;max-width:900px;margin:auto}.jar{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);width:270px;height:230px}.jar.shake{animation:jarShake .9s ease-in-out}@keyframes jarShake{0%,100%{transform:translateX(-50%) rotate(0)}10%{transform:translateX(-50%) rotate(-10deg) scale(1.05)}20%{transform:translateX(-50%) rotate(10deg) scale(1.08)}30%{transform:translateX(-50%) rotate(-13deg) scale(1.08)}40%{transform:translateX(-50%) rotate(13deg) scale(1.1)}52%{transform:translateX(-50%) rotate(-9deg) scale(1.07)}65%{transform:translateX(-50%) rotate(7deg)}80%{transform:translateX(-50%) rotate(-3deg)}}.mouth{position:absolute;left:50%;top:8px;transform:translateX(-50%);width:145px;height:46px;border:9px solid #955c32;border-radius:50%;background:#241a14;z-index:3}.body{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:245px;height:195px;border:7px solid #63391f;border-radius:43% 43% 34% 34%/25% 25% 48% 48%;background:linear-gradient(90deg,#83502d,#c17b42 30%,#965a31 70%,#6e4025);box-shadow:0 18px 28px #0009}.jarText{position:absolute;z-index:5;left:50%;top:105px;transform:translateX(-50%) rotate(-3deg);background:#efdfb3;color:#30251c;border:2px solid #5b4736;padding:9px 22px;font-family:serif;font-size:25px;font-weight:900}.mini{position:absolute;left:50%;bottom:34px;transform:translateX(-50%);width:180px;height:80px;z-index:2}.miniBall{position:absolute;width:34px;height:34px;border-radius:50%;background:#f1e2b9;border:3px solid #594534;color:#33291f;font-weight:900;display:flex;align-items:center;justify-content:center}
+.bigBall{position:absolute;z-index:10;left:50%;bottom:115px;margin-left:-80px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle at 35% 25%,#fff,#efd371 55%,#ae711c);border:5px solid #fff4c8;color:#2a2017;display:flex;flex-direction:column;justify-content:center;align-items:center;opacity:0;box-shadow:0 12px 35px #000}.bigBall.fly{animation:fly 1s cubic-bezier(.18,.8,.24,1) forwards}@keyframes fly{0%{opacity:1;transform:translateY(90px) scale(.15) rotate(-160deg)}35%{opacity:1;transform:translateY(-55px) scale(.72) rotate(120deg)}70%{opacity:1;transform:translateY(-155px) scale(1.28) rotate(-20deg)}100%{opacity:1;transform:translateY(-125px) scale(1.12) rotate(0)}}.ballNo{font-size:58px;font-weight:1000}.ballSex{font-size:17px;font-weight:900}.result{min-height:145px;margin-top:-18px;text-shadow:0 4px 12px #000}.result .pickedName{font-size:46px;font-weight:1000;letter-spacing:2px}.result .pickedNumber{font-size:24px;color:#eee;margin-top:3px}.result .teamNo{font-size:66px;color:#ffd36a;font-weight:1000;line-height:1.05;margin-top:5px}.drawBtn{width:min(330px,88vw);padding:16px;border:0;border-radius:99px;background:linear-gradient(#edca63,#b87a1b);font-size:20px;font-weight:1000;box-shadow:0 6px #704a17}.drawBtn:disabled{opacity:.55}.board{max-width:850px;margin:24px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:left}.teamCard{background:#fff9eb;color:#2a221b;border-radius:9px;overflow:hidden;min-height:100px}.teamCard h3{margin:0;background:#d7c5a3;padding:8px;text-align:center}.teamCard ul{list-style:none;padding:8px 10px;margin:0;font-size:13px;line-height:1.7}.tools{margin-top:17px}.tools button{padding:9px 12px;margin:3px;border:1px solid #958675;background:transparent;color:#ddd;border-radius:8px}.modal{display:none;position:fixed;inset:0;background:#000c;z-index:30;align-items:center;justify-content:center;padding:18px}.modal.show{display:flex}.modalBox{background:#fff8e8;color:#241c15;border:5px double #9a7428;border-radius:13px;width:min(600px,96vw);padding:22px}.finalGrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.finalTeam{border:1px solid #b8a582;border-radius:8px;padding:10px}.closeBtn{width:100%;padding:12px;margin-top:15px;background:#28211b;color:#fff;border:0;border-radius:8px}
+@media(max-width:560px){.paper{padding:16px 13px}.title{font-size:27px}.stage{height:430px}.jar{transform:translateX(-50%) scale(.85);transform-origin:bottom}.result .pickedName{font-size:36px}.result .teamNo{font-size:54px}.board{grid-template-columns:1fr 1fr}.finalGrid{grid-template-columns:1fr}}
+</style></head><body>
+<section id="setupPage" class="page active"><div class="paper"><h1>건패 조 추첨 명단</h1><div class="sub">족자에 적힌 이름과 번호를 입력해주세요.</div>
+<div class="groupHead"><span>👨 남자</span><button type="button" id="addMale" class="addBtn">＋ 행 추가</button></div><div id="maleRows" class="rows"></div>
+<div class="groupHead"><span>👩 여자</span><button type="button" id="addFemale" class="addBtn">＋ 행 추가</button></div><div id="femaleRows" class="rows"></div>
+<div class="note">• 남자/여자 번호는 각각 관리하므로 남자 1번과 여자 1번이 동시에 있어도 됩니다.<br>• 부부 여부와 관계없이 개인별 추첨됩니다.<br>• 4개 조의 인원과 남녀 구성이 최대한 고르게 배정됩니다.</div>
+<button type="button" id="goDraw" class="next">조 추첨 화면으로 이동 →</button></div></section>
+
+<section id="drawPage" class="page"><div class="title">2026 건패 조 추첨식</div><div class="caption">운명은 이미 항아리 안에 있습니다. · 🔊 효과음 ON</div><div id="progress" class="progress"></div>
+<div class="stage"><div id="bigBall" class="bigBall"><div id="ballNo" class="ballNo"></div><div id="ballSex" class="ballSex"></div></div><div id="jar" class="jar"><div class="mouth"></div><div class="body"></div><div class="jarText">건 패</div><div id="miniBalls" class="mini"></div></div></div>
+<div id="result" class="result"></div><button type="button" id="drawButton" class="drawBtn">뽑 기</button><div id="board" class="board"></div>
+<div class="tools"><button type="button" id="backButton">← 명단 수정</button><button type="button" id="fullButton">전체화면</button></div></section>
+
+<div id="finalModal" class="modal"><div class="modalBox"><h2>🎉 조 편성 완료 🎉</h2><div id="finalGrid" class="finalGrid"></div><button type="button" id="closeModal" class="closeBtn">확인</button></div></div>
+
+<script>
+(function(){
+"use strict";
+var queue=[], teams=[[],[],[],[]], index=0, busy=false;
+var setupPage=document.getElementById("setupPage"), drawPage=document.getElementById("drawPage");
+var maleRows=document.getElementById("maleRows"), femaleRows=document.getElementById("femaleRows");
+var bigBall=document.getElementById("bigBall"), ballNo=document.getElementById("ballNo"), ballSex=document.getElementById("ballSex"), jar=document.getElementById("jar");
+var result=document.getElementById("result"), board=document.getElementById("board"), miniBalls=document.getElementById("miniBalls");
+var progress=document.getElementById("progress"), drawButton=document.getElementById("drawButton");
+var finalModal=document.getElementById("finalModal"), finalGrid=document.getElementById("finalGrid");
+
+
+var audioCtx=null;
+function getAudio(){
+ try{
+  if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+  if(audioCtx.state==="suspended") audioCtx.resume();
+  return audioCtx;
+ }catch(e){return null;}
+}
+function osc(freq,start,dur,vol,type,endFreq){
+ var a=getAudio(); if(!a)return;
+ var o=a.createOscillator(),g=a.createGain(),now=a.currentTime;
+ o.type=type||"sine";
+ o.frequency.setValueAtTime(freq,now+start);
+ if(endFreq) o.frequency.exponentialRampToValueAtTime(endFreq,now+start+dur);
+ g.gain.setValueAtTime(0.0001,now+start);
+ g.gain.exponentialRampToValueAtTime(vol,now+start+.015);
+ g.gain.exponentialRampToValueAtTime(0.0001,now+start+dur);
+ o.connect(g);g.connect(a.destination);o.start(now+start);o.stop(now+start+dur+.05);
+}
+function noise(start,dur,vol){
+ var a=getAudio();if(!a)return;
+ var len=Math.max(1,Math.floor(a.sampleRate*dur)),buf=a.createBuffer(1,len,a.sampleRate),data=buf.getChannelData(0);
+ for(var i=0;i<len;i++) data[i]=(Math.random()*2-1)*(1-i/len);
+ var s=a.createBufferSource(),f=a.createBiquadFilter(),g=a.createGain(),now=a.currentTime;
+ s.buffer=buf;f.type="lowpass";f.frequency.value=700;
+ g.gain.setValueAtTime(.0001,now+start);g.gain.exponentialRampToValueAtTime(vol,now+start+.01);g.gain.exponentialRampToValueAtTime(.0001,now+start+dur);
+ s.connect(f);f.connect(g);g.connect(a.destination);s.start(now+start);
+}
+function drum(){
+ // Low cinematic pulse + accelerating snare-like hits.
+ osc(58,0,.72,.16,"sine",78);
+ osc(116,0,.65,.05,"triangle",150);
+ for(var i=0;i<14;i++){
+   var t=i*.043;
+   noise(t,.065,.035+i*.004);
+   osc(105+(i%2)*22,t,.055,.045+i*.002,"triangle");
+ }
+}
+function pop(){
+ // Impact when the ball bursts out.
+ osc(72,0,.38,.22,"sine",45);
+ noise(0,.22,.16);
+ osc(392,.03,.20,.09,"triangle",784);
+ osc(784,.10,.28,.08,"sine",1175);
+}
+function fanfare(){
+ // Short ceremonial brass-like chord and final high accent.
+ var notes=[261.63,329.63,392.00];
+ notes.forEach(function(n){osc(n,0,.34,.075,"sawtooth");});
+ [329.63,415.30,493.88].forEach(function(n){osc(n,.25,.34,.075,"sawtooth");});
+ [392,493.88,587.33,783.99].forEach(function(n){osc(n,.50,.62,.085,"sawtooth");});
+ osc(98,0,.78,.10,"sine",65);
+ noise(.50,.18,.055);
+}
+function addRow(container){
+ var row=document.createElement("div"); row.className="row";
+ var name=document.createElement("input"); name.className="personName"; name.placeholder="이름";
+ var number=document.createElement("input"); number.className="personNo"; number.type="number"; number.inputMode="numeric"; number.placeholder="번호";
+ var remove=document.createElement("button"); remove.type="button"; remove.className="remove"; remove.textContent="×";
+ remove.addEventListener("click",function(){row.remove();});
+ row.appendChild(name); row.appendChild(number); row.appendChild(remove); container.appendChild(row);
+}
+document.getElementById("addMale").addEventListener("click",function(){addRow(maleRows);});
+document.getElementById("addFemale").addEventListener("click",function(){addRow(femaleRows);});
+var presetMaleNames=["고하늘","김벼리","박성민","최계원","장종훈","황민국","조민재","김건신","정승현","이현우","임철진"];
+presetMaleNames.forEach(function(n){addRow(maleRows);var rr=maleRows.querySelectorAll(".row");rr[rr.length-1].querySelector(".personName").value=n;});
+for(var j=0;j<8;j++)addRow(femaleRows);
+
+function readRows(container,sex){
+ return Array.prototype.slice.call(container.querySelectorAll(".row")).map(function(r){
+  return {name:r.querySelector(".personName").value.trim(),num:r.querySelector(".personNo").value.trim(),sex:sex};
+ }).filter(function(x){return x.name!==""||x.num!=="";});
+}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+document.getElementById("goDraw").addEventListener("click",function(){getAudio();
+ var males=readRows(maleRows,"남"), females=readRows(femaleRows,"여"), all=males.concat(females);
+ if(!all.length){alert("명단을 입력해주세요.");return;}
+ for(var i=0;i<all.length;i++){if(!all[i].name||!all[i].num){alert("입력한 행에는 이름과 번호를 모두 입력해주세요.");return;}}
+ function duplicate(arr){var seen={};for(var k=0;k<arr.length;k++){if(seen[arr[k].num])return true;seen[arr[k].num]=true;}return false;}
+ if(duplicate(males)||duplicate(females)){alert("남자 또는 여자 명단 안에서 번호가 중복되었습니다.");return;}
+ males=shuffle(males); females=shuffle(females); queue=[];
+ var femaleFirst=Math.random()<0.5;
+ while(males.length||females.length){
+  if(femaleFirst){if(females.length)queue.push(females.shift());if(males.length)queue.push(males.shift());}
+  else{if(males.length)queue.push(males.shift());if(females.length)queue.push(females.shift());}
+ }
+ teams=[[],[],[],[]];index=0;busy=false;drawButton.textContent="뽑 기";drawButton.disabled=false;result.innerHTML="";
+ setupPage.classList.remove("active");drawPage.classList.add("active");renderBoard();renderMini();updateProgress();
+});
+
+function candidateTeams(p){
+ // 1) 같은 성별 인원이 가장 적은 팀을 우선
+ // 2) 그중 전체 인원이 가장 적은 팀 우선
+ // 3) 여전히 같으면 무작위 선택
+ var sexCounts=teams.map(function(t){return t.filter(function(x){return x.sex===p.sex;}).length;});
+ var sexMin=Math.min.apply(null,sexCounts);
+ var c=[0,1,2,3].filter(function(i){return sexCounts[i]===sexMin;});
+ var sizes=c.map(function(i){return teams[i].length;});
+ var sizeMin=Math.min.apply(null,sizes);
+ return c.filter(function(i){return teams[i].length===sizeMin;});
+}
+drawButton.addEventListener("click",function(){
+ if(busy||index>=queue.length)return; busy=true;
+ var p=queue[index], c=candidateTeams(p), team=c[Math.floor(Math.random()*c.length)];
+ bigBall.classList.remove("fly");jar.classList.remove("shake");void jar.offsetWidth;
+ ballNo.textContent=p.num;ballSex.textContent=p.sex==="남"?"남자 족자":"여자 족자";result.innerHTML="";drawButton.disabled=true;
+ drum();jar.classList.add("shake");
+ setTimeout(function(){pop();bigBall.classList.add("fly");},650);
+ setTimeout(function(){
+  teams[team].push(p);
+  result.innerHTML="<div class='pickedName'>"+p.name+"</div><div class='pickedNumber'>족자 "+p.num+"번 · "+(p.sex==="남"?"남자":"여자")+"</div><div class='teamNo'>"+(team+1)+"조</div>";fanfare();
+  index++;renderBoard();renderMini();updateProgress();busy=false;
+  jar.classList.remove("shake");
+  if(index>=queue.length){drawButton.textContent="조 편성 완료";drawButton.disabled=true;setTimeout(showFinal,1100);}else drawButton.disabled=false;
+ },1750);
+});
+function renderBoard(){board.innerHTML="";teams.forEach(function(t,i){var card=document.createElement("div");card.className="teamCard";var names=t.map(function(x){return "<li>"+(x.sex==="남"?"👨":"👩")+" "+x.name+" <small>("+x.num+")</small></li>";}).join("");card.innerHTML="<h3>"+(i+1)+"조 · "+t.length+"명</h3><ul>"+names+"</ul>";board.appendChild(card);});}
+function renderMini(){miniBalls.innerHTML="";queue.slice(index,index+15).forEach(function(p,i){var b=document.createElement("div");b.className="miniBall";b.textContent=p.num;b.style.left=(5+(i*39)%145)+"px";b.style.top=(4+(i*25)%50)+"px";b.style.transform="rotate("+((i*29)%40-20)+"deg)";miniBalls.appendChild(b);});}
+function updateProgress(){progress.textContent="추첨 "+index+" / "+queue.length+" · 남은 인원 "+(queue.length-index)+"명";}
+function showFinal(){finalGrid.innerHTML="";teams.forEach(function(t,i){var d=document.createElement("div");d.className="finalTeam";d.innerHTML="<b>"+(i+1)+"조</b><br>"+t.map(function(x){return x.name;}).join(" · ");finalGrid.appendChild(d);});finalModal.classList.add("show");}
+document.getElementById("closeModal").addEventListener("click",function(){finalModal.classList.remove("show");});
+document.getElementById("backButton").addEventListener("click",function(){if(index>0&&!confirm("현재 추첨 결과를 버리고 명단 입력으로 돌아갈까요?"))return;drawPage.classList.remove("active");setupPage.classList.add("active");});
+document.getElementById("fullButton").addEventListener("click",function(){var el=document.documentElement;if(el.requestFullscreen)el.requestFullscreen();else if(el.webkitRequestFullscreen)el.webkitRequestFullscreen();});
+})();
+</script></body></html>
